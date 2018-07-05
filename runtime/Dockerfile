@@ -10,6 +10,7 @@ COPY --from=build-stage /usr/local/include/opencv /usr/local/include/opencv
 COPY --from=build-stage /usr/local/include/opencv2 /usr/local/include/opencv2
 
 ENV PKG="libstdc++ \
+         imagemagick \
          ca-certificates \
          wget \
          libjpeg-turbo \
