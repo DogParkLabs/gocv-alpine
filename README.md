@@ -24,26 +24,26 @@ Sample Docker file you can find [here](example/Dockerfile).
 ## Build the runtime image
 
 ```bash
-pushd runtime && docker build -t denismakogon/gocv-alpine:3.4.1-runtime .; popd
+pushd runtime && docker build -t dogparklabs/gocv-alpine:3.4.2-runtime .; popd
 ```
 
 ## Build the build-stage image
 
 ```bash
-pushd build-stage && docker build -t denismakogon/gocv-alpine:3.4.1-buildstage .; popd
+pushd build-stage && docker build -t dogparklabs/gocv-alpine:3.4.2-buildstage .; popd
 ```
 
 ## Test sample:
 
 ```bash
-pushd example && docker build -t denismakogon/gocv-alpine:test .; popd
+pushd example && docker build -t dogparklabs/gocv-alpine:test .; popd
 ```
 ```bash
-docker run --rm -ti denismakogon/gocv-alpine:test
+docker run --rm -ti dogparklabs/gocv-alpine:test
 ```
 
 the output should be the following:
 ```bash
-gocv version: 0.11.0
+gocv version: 0.14.0
 opencv lib version: 3.4.2
 ```
