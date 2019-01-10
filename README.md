@@ -1,12 +1,12 @@
-# GoCV-compatible OpenCV 3.4 Alpine 3.7 Docker images
+# GoCV-compatible OpenCV 4.0 Alpine 3.7 Docker images
 
 ## What's in build-stage image?
 
  - Alpine 3.7
  - FFMPEG 4.0
  - Golang 1.10
- - OpenCV 3.4.2
- - OpenCV 3.4.2 contrib packages required by GoCV
+ - OpenCV 4.0.0
+ - OpenCV 4.0.0 contrib packages required by GoCV
 
 ## What's in runtime image?
 
@@ -21,16 +21,16 @@ This is a build image for the multi-stage image provisioning as well as runtime 
 
 Sample Docker file you can find [here](example/Dockerfile).
 
-## Build the runtime image
-
-```bash
-pushd runtime && docker build -t dogparklabs/gocv-alpine:3.4.2-runtime .; popd
-```
-
 ## Build the build-stage image
 
 ```bash
-pushd build-stage && docker build -t dogparklabs/gocv-alpine:3.4.2-buildstage .; popd
+pushd build-stage && docker build -t dogparklabs/gocv-alpine:4.0.0-buildstage .; popd
+
+
+## Build the runtime image
+
+```bash
+pushd runtime && docker build -t dogparklabs/gocv-alpine:4.0.0-runtime .; popd
 ```
 
 ## Test sample:
@@ -38,12 +38,13 @@ pushd build-stage && docker build -t dogparklabs/gocv-alpine:3.4.2-buildstage .;
 ```bash
 pushd example && docker build -t dogparklabs/gocv-alpine:test .; popd
 ```
+
 ```bash
 docker run --rm -ti dogparklabs/gocv-alpine:test
 ```
 
 the output should be the following:
 ```bash
-gocv version: 0.14.0
-opencv lib version: 3.4.2
+gocv version: 0.18.0
+opencv lib version: 4.0.0
 ```
