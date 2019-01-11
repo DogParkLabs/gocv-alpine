@@ -25,7 +25,7 @@ Sample Docker file you can find [here](example/Dockerfile).
 
 ```bash
 pushd build-stage && docker build -t dogparklabs/gocv-alpine:4.0.0-buildstage .; popd
-
+```
 
 ## Build the runtime image
 
